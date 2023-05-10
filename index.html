@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop</title>
+    <script src="https://kit.fontawesome.com/a16fd0da8d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
+            <input type="checkbox" id="toggler" />
+            <label for="toggler"><i class="fas fa-bars"></i></label>
+
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="menu">
+                <ul class="list">
+                    <a href="#">
+                        <li title="Buscar"><i class="fa fa-magnifying-glass"></i></li>
+                    </a>
+                    <a href="#">
+                        <li title="Carrito de compras"><i class="fa fa-cart-arrow-down"></i></li>
+                    </a>
+                    <a href="#">
+                        <li title="Login">
+                            <i class="fa fa-user "></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-content slider-banner">
+            <ul class="banner">
+                <li class="banner-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/assets/img/banner1.jpg">
+                        <source media="(max-width: 767px)" srcset="/assets/img/banner1-mobile.jpg">
+                        <img src="/assets/img/banner1.jpg" alt="Imagen 1">
+                    </picture>
+                </li>
+                <li class="banner-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/assets/img/banner2.jpg">
+                        <source media="(max-width: 767px)" srcset="/assets/img/banner2-mobile.jpg">
+                        <img src="/assets/img/banner2.jpg" alt="Imagen 2">
+                    </picture>
+                </li>
+                <li class="banner-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/assets/img/banner3.jpg">
+                        <source media="(max-width: 767px)" srcset="/assets/img/banner3-mobile.jpg">
+                        <img src="/assets/img/banner3.jpg" alt="Imagen 3">
+                    </picture>
+                </li>
+                <li class="banner-item">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/assets/img/banner4.jpg">
+                        <source media="(max-width: 767px)" srcset="/assets/img/banner4-mobile.jpg">
+                        <img src="/assets/img/banner4.jpg" alt="Imagen 4">
+                    </picture>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section-content sc-2">
+
+            <div class="barra-informacion">
+                <div class="barra-columna">
+                    <i class="fa-solid fa-truck-fast fa-2xl"></i>
+                    <div class="barra-descripcion">
+                        <span>Envíos a todo el país</span>
+                        <p>Rápido, sin vueltas</p>
+                    </div>
+                </div>
+                <div class="barra-columna">
+                    <i class="fa-solid fa-credit-card fa-2xl"></i>
+                    <div class="barra-descripcion">
+                        <span>¡Pagá en cuotas!</span>
+                        <p>Ver medios de pago</p>
+                    </div>
+                </div>
+                <div class="barra-columna">
+                    <i class="fa-solid fa-store fa-2xl"></i>
+                    <div class="barra-descripcion">
+                        <span>Precio especial</span>
+                        <p>Consultá con un vendedor</p>
+                    </div>
+                </div>
+                <div class="barra-columna">
+                    <i class="fa-solid fa-certificate fa-2xl"></i>
+                    <div class="barra-descripcion">
+                        <span>Compra 100% segura</span>
+                        <p>Garantías oficiales</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categorias-populares">
+                <h2 class="section-title">Categorías Populares</h2>
+
+                <div class="categoria-container">
+                    <div class="categoria-item">
+                        <img src="/assets/img/categoria1.jpg" alt="Celulares" class="round-image">
+                        <h3 class="categoria-title">Celulares</h3>
+                        <p class="categoria-paragraph"> Encuentra los últimos modelos de celulares de las mejores
+                            marcas, con la tecnología más avanzada y funciones innovadoras.</p>
+                    </div>
+                    <div class="categoria-item">
+                        <img src="/assets/img/categoria2.jpg" alt="Accesorios para Gaming" class="round-image">
+                        <h3 class="categoria-title">Accesorios para Gaming</h3>
+                        <p class="categoria-paragraph">Mejora tu experiencia de juego con nuestros accesorios para
+                            gaming, desde teclados y ratones hasta auriculares y sillas ergonómicas.</p>
+                    </div>
+                    <div class="categoria-item">
+                        <img src="/assets/img/categoria3.jpg" alt="Smartwatch" class="round-image">
+                        <h3 class="categoria-title">Smartwatch</h3>
+                        <p class="categoria-paragraph">Mantente conectado con un smartwatch. Recibe
+                            notificaciones de tus redes sociales y controla tus entrenamientos desde tu muñeca.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-content sc-3">
+            <h2 class="section-title">Ofertas</h2>
+
+            <div class="card-oferta">
+                <img src="/assets/img/oferta1.jpg" alt="" class="card-oferta-img">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-container">
+        <div class="footer-top">
+            <div>
+                <h6 class="footer-title">TechShop</h6>
+                <ul class="footer-list">
+                    <a href="index.html" class="logo-footer"><img src="assets/img/logo.png" alt=""></a>
+
+                </ul>
+            </div>
+            <div>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="productos.html" class="footer-list-link">Productos</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="faq.html" class="footer-list-link">Preguntas frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contact.html" class="footer-list-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">¿Cómo comprar?</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Sucursales</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Sobre Nosotros</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <hr />
+        <div class="footer-bottom">
+            <span class="copyright">&copy; 2023 TechShop.</span>
+            <ul class="footer-list footer-list-social">
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-link">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

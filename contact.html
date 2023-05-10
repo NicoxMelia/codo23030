@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop</title>
+    <script src="https://kit.fontawesome.com/a16fd0da8d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>
+            <input type="checkbox" id="toggler" />
+            <label for="toggler"><i class="fas fa-bars"></i></label>
+
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="menu">
+                <ul class="list">
+                    <a href="#">
+                        <li title="Buscar"><i class="fa fa-magnifying-glass"></i></li>
+                    </a>
+                    <a href="#">
+                        <li title="Carrito de compras"><i class="fa fa-cart-arrow-down"></i></li>
+                    </a>
+                    <a href="#">
+                        <li title="Login">
+                            <i class="fa fa-user "></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form class="form-contacto">
+            <h2 class="section-title">Contacto</h2>
+
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+
+            <div class="submit">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div>
+                <h6 class="footer-title">TechShop</h6>
+                <ul class="footer-list">
+                    <a href="index.html" class="logo-footer"><img src="assets/img/logo.png" alt=""></a>
+
+                </ul>
+            </div>
+            <div>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="productos.html" class="footer-list-link">Productos</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="faq.html" class="footer-list-link">Preguntas frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contact.html" class="footer-list-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">¿Cómo comprar?</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Sucursales</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="" class="footer-list-link">Sobre Nosotros</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <hr />
+        <div class="footer-bottom">
+            <span class="copyright">&copy; 2023 TechShop.</span>
+            <ul class="footer-list footer-list-social">
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-link">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#" class="footer-list-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

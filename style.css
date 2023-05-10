@@ -1,0 +1,641 @@
+/* Estilos generales */
+* {
+	box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  margin: 0;
+	padding: 0;
+  background-color: #1e1f22;
+  color: white;
+  width: auto;
+}
+
+/* Estilos para la navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 0 3rem;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  margin-right: 50px;
+  bottom: 5px;
+}
+
+.logo img {
+  height: 7.5vh;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.list li:hover {
+  text-decoration: underline;
+}
+
+#toggler,
+.navbar label {
+  display: none;
+}
+
+
+/*Fin de Estilos para la navbar */
+
+/* ===== INICIO ESTILOS INDEX ==== */
+
+/* Inicio secciones del index */
+.section-content {
+  place-items: center;
+	width: 100%;
+  height: auto;
+  color: #fff;
+}
+
+.sc-1,
+.sc-2,
+.sc-3 {
+  padding: 1rem;
+}
+
+.sc-1,
+.sc-3 {
+  background-color: #17181a;
+}
+/* Fin secciones del index */
+
+
+/* Inicio carrusel */
+.slider-banner {
+  position: relative;
+	width: 100%;
+  height: 100vh;
+	overflow: hidden;
+}
+
+.banner {
+	display: flex;
+	padding: 0;
+	width: 400%;
+  margin:0;
+	animation: cambio 20s infinite alternate linear;
+}
+
+.banner-item {
+	width: 100%;
+  height: 100%;
+	list-style: none;
+}
+
+.banner-item img {
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+/* Fin carrusel */
+
+/* Inicio barra información */
+.barra-informacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+  max-width: 80%;
+  min-width: 115px;
+  margin: 20px auto;
+  border-radius: 10px;
+  color: #000;
+}
+
+.barra-columna {
+  display: flex;
+  align-items: center;
+  margin:0 auto;
+}
+
+.barra-descripcion {
+  text-align: center;
+  margin-left: 5px;
+  max-width: 80%;
+}
+
+.barra-descripcion  span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.barra-descripcion  p {
+  font-size: 12px;
+  margin: 0;
+}
+/* Fin barra información */
+
+
+/* Inicio Sección de categorías populares*/
+.categoria-populares {
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin: 30px auto;
+  font-size: clamp(26px, 5vw, 40px);
+}
+
+.categoria-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.categoria-item {
+  flex-basis: 30%;
+  text-align: center;
+  /* margin-right: 10px; */
+}
+
+
+.round-image {
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+  overflow: hidden;
+  object-fit: cover;
+  /* La propiedad object-fit con el valor cover hace que la imagen se ajuste
+  al tamaño del contenedor sin deformarla, y la propiedad border-radius con
+  el valor 50% crea un borde circular para la imagen. */
+}
+
+.categoria-item .round-image:hover{
+  border: 2px solid rgba(145, 29, 212);
+
+}
+
+.categoria-title {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.categoria-paragraph {
+  text-align: auto;
+  font-size: 14px;
+}
+
+.categoria-item:hover
+{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/*Fin Sección de categorías populares*/
+
+/* Inicio sección ofertas */
+.card-oferta {
+  position: relative;
+  max-width: 90%;
+  width: 40em;
+  height: 40em;
+  outline: 2px solid rgba(145, 29, 212, 0.25);
+  outline-offset: -10px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 20px;
+  margin: 0 auto;
+  bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-oferta-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .25s;
+  z-index: -1;
+}
+
+.card-oferta:hover .card-oferta-img {
+  transform: scale(1.5);
+}
+/* Fin sección ofertas */
+/* ===== FIN ESTILOS INDEX ==== */
+
+
+
+/* ===== INICIO ESTILOS PRODUCTOS ==== */
+/* select filtro categorías */
+.select-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.select {
+  position: relative;
+  display: flex;
+  width: 15em;
+  height: 3em;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 10px;
+}
+
+/* Flecha */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  color: rgba(145, 29, 212);
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 1em;
+  color: black;
+  background-color: white;
+  background-image: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* Inicio lista productos */
+.productos-section {
+  padding: 8vh 20px;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.productos-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  color: #333;
+  box-shadow: 2px 0.8rem 1rem rgba(0, 0, 0, 0.025);
+  width: 100%;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  transform: scale(0.95);
+}
+
+.card:hover .card-image img {
+  transform: scale(1);
+  border-radius: 5px;
+
+}
+
+
+.card-info {
+  position: relative;
+  padding: 1em 2em;
+  flex:1;
+}
+
+
+.card-nombre {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #4E4E4E;
+}
+
+.card-categoria {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #BA7E7E;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card-precio {
+  color: #C3A1A0;
+}
+
+.btn {
+  background: linear-gradient(to right bottom,rgba(249, 4, 159, 0.8),rgba(48, 110, 255, 0.8));
+  box-shadow: 10px 10px 20px black;
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #F5F5F5;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.btn:hover {
+  background: linear-gradient(to right bottom, rgba(249, 4, 159),rgba(48, 110, 255));
+  transform: scale(1.1);
+}
+
+/* Fin lista productos */
+/* ===== FIN ESTILOS PRODUCTOS ==== */
+
+
+
+/* ===== INICIO ESTILOS FAQ ==== */
+.faq-section {
+  width: 100%;
+  margin-inline: auto;
+  padding: 8vh 15%;
+}
+
+.faq-header-title {
+  font-size: clamp(26px, 5vw, 40px);
+  margin-bottom: 30px;
+}
+
+.faq-panel {
+  padding: 7px 21px;
+  margin-bottom: 24px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+
+.faq-question {
+  padding-block: 7px;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  text-decoration: underline;
+}
+
+.faq-answer {
+  color: #9c9ca1;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  font-size: 15px;
+}
+/* ===== FIN ESTILOS FAQ ==== */
+
+
+
+/* ===== INICIO ESTILOS CONTACTO ==== */
+.form-contacto {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 8vh;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.submit{
+  text-align: right;
+}
+
+input[type="submit"] {
+  background: linear-gradient(to right bottom, rgba(249, 4, 159, 0.8),rgba(48, 110, 255, 0.8));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0;
+  width: 100px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(to right bottom,rgba(249, 4, 159),rgba(48, 110, 255));
+  transform: scale(1.1);
+}
+
+/* ===== FIN ESTILOS CONTACTO ==== */
+
+
+
+/* ===== INICIO ESTILOS FOOTER ==== */
+.footer {
+  background-color: #151515;
+  color: #666873;
+  width: 100%;
+}
+
+.footer-top {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 20px;
+
+}
+
+.footer-title {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 40px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.footer-list-link {
+  color: rgb(145, 29, 212);
+
+  transition: color 0.25s;
+}
+
+.footer-list-link:hover {
+  color: rgb(91, 5, 113);
+
+}
+
+.logo-footer img {
+  height: 7em;
+}
+
+.footer hr {
+  margin-block: 25px;
+  border: none;
+  border-top: 1px solid rgba(252, 255, 255, 0.1);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 25px;
+}
+
+.footer-list-social {
+  flex-direction: row;
+  margin-top: 0;
+  font-size: 25px;
+}
+/* ===== FIN ESTILOS FOOTER ==== */
+
+@media screen and (min-width: 920px) {
+  .card {
+      display: grid;
+      grid-auto-flow: column;
+      max-width: 75rem;
+      width: calc(50% - 20px);
+      margin: 10px;
+  }
+
+  .card-image {
+      width: 230px;
+  }
+
+  .form-contacto {
+    width: 50%;
+  }
+
+  .btn {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    min-width: 254px;
+  }
+
+  /* Navbar */
+  .menu {
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+  }
+
+  .list {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+
+  .navbar label {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+  }
+
+  #toggler:checked~.menu {
+      max-height: 100%;
+  }
+
+  /* Home */
+  .round-image {
+    width: 12em;
+    height: 12em;
+    
+  }
+ 
+  .categoria-item{
+   margin-bottom: 3em;
+  }
+
+  .card-oferta {
+    width: 25em;
+    height: 25em;
+  }
+
+  .faq-container {
+    padding: 8vh 5%;
+  }
+
+  /* Contacto */
+  .form-contacto {
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .round-image {
+    width: 10em;
+    height: 10em;
+  }
+  
+  /* Contacto */
+  .form-contacto {
+    width: 80%;
+  }
+}
