@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/a16fd0da8d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="./assets/js/jquery-3.7.0.min.js"></script>
 
 </head>
 
@@ -63,7 +64,7 @@
                 </div>
             </div>
             <div class="productos-list">
-                <div class="card">
+                <!--<div class="card">
                     <div class="card-image">
                         <img src="assets/img/productos/celular1.png" class="card-image" />
 
@@ -220,7 +221,7 @@
                         <h3 class="card-precio"> $105.000 </h3>
                         <button class="btn">Agregar al carrito</button>
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </section>
@@ -282,6 +283,40 @@
             </ul>
         </div>
         </div>
+
+        <script>
+            $(document).ready(function(){
+
+                loadProducts();
+        
+            });
+
+            function loadProducts(){
+                let indice = 0;
+                fetch('https://sheetdb.io/api/v1/140pusm8rm9f7')
+                .then((response) => response.json())
+                .then((data) => {
+                    for(producto of data){
+                        $(".productos-list").append("<div class='card' id='idCard" + indice + "'>");
+                        $("#idCard" + indice).append("<div class='card-image' id='idCardImg" + indice + "'>");
+                        $("#idCardImg" + indice).append("<img class='card-image' id='idImg" + indice +"'/>");
+                        $("#idImg" + indice).attr("src", producto.imagen);
+                        $("#idCard" + indice).append("</div>");
+                        $("#idCard" + indice).append("<div class='card-info' id='idInfo" + indice +"'>");
+                        $("#idInfo" + indice).append("<span class='card-categoria'>" + producto.categoria + "</span>");
+                        $("#idInfo" + indice).append("<h2 class='card-nombre'>"+ producto.producto + "</h2>");
+                        $("#idInfo" + indice).append("<h3 class='card-precio'>" + producto.precio + "</h3>");
+                        $("#idInfo" + indice).append("<button class='btn'>Agregar al carrito</button>");
+                        $("#idCard" + indice).append("</div>");
+                        $(".productos-list").append("</div>");
+                        console.log(producto);
+                        console.log("-------------");
+                        indice++;
+
+                    }
+                });
+            }
+        </script>
 </body>
 
 </html>
