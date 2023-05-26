@@ -293,28 +293,29 @@
 
             function loadProducts() {
                 let indice = 0;
-                fetch('https://sheetdb.io/api/v1/140pusm8rm9f7')
-                    .then((response) => response.json())
-                    .then((data) => {
-                        for (producto of data) {
-                            $(".productos-list").append("<div class='card' id='idCard" + indice + "'>");
-                            $("#idCard" + indice).append("<div class='card-image' id='idCardImg" + indice + "'>");
-                            $("#idCardImg" + indice).append("<img class='card-image' id='idImg" + indice + "'/>");
-                            $("#idImg" + indice).attr("src", producto.imagen);
-                            $("#idCard" + indice).append("</div>");
-                            $("#idCard" + indice).append("<div class='card-info' id='idInfo" + indice + "'>");
-                            $("#idInfo" + indice).append("<span class='card-categoria'>" + producto.categoria + "</span>");
-                            $("#idInfo" + indice).append("<h2 class='card-nombre'>" + producto.producto + "</h2>");
-                            $("#idInfo" + indice).append("<h3 class='card-precio'>" + producto.precio + "</h3>");
-                            $("#idInfo" + indice).append("<button class='btn'>Agregar al carrito</button>");
-                            $("#idCard" + indice).append("</div>");
-                            $(".productos-list").append("</div>");
-                            console.log(producto);
-                            console.log("-------------");
-                            indice++;
+                fetch('https://sheetlabs.com/CODO/productos')
+                .then((response) => response.json())
+                .then((data) => {
+                    for(producto of data){
+                        $(".productos-list").append("<div class='card' id='idCard" + indice + "'>");
+                        $("#idCard" + indice).append("<div class='card-image' id='idCardImg" + indice + "'>");
+                        $("#idCardImg" + indice).append("<img class='card-image' id='idImg" + indice +"'/>");
+                        $("#idImg" + indice).attr("src", producto.imagen);
+                        $("#idCard" + indice).append("</div>");
+                        $("#idCard" + indice).append("<div class='card-info' id='idInfo" + indice +"'>");
+                        $("#idInfo" + indice).append("<span class='card-categoria'>" + producto.categoria + "</span>");
+                        $("#idInfo" + indice).append("<h2 class='card-nombre'>"+ producto.producto + "</h2>");
+                        $("#idInfo" + indice).append("<h3 class='card-precio'>" + producto.precio + "</h3>");
+                        $("#idInfo" + indice).append("<button class='btn'>Agregar al carrito</button>");
+                        $("#idCard" + indice).append("</div>");
+                        $(".productos-list").append("</div>");
+                        console.log(producto);
+                        console.log("-------------");
+                        indice++;
 
-                        }
-                    });
+                    }
+                });
+                
             }
         </script>
 </body>
