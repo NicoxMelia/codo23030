@@ -37,7 +37,7 @@
                     <a href="#">
                         <li title="Carrito de compras"><i class="fa fa-cart-arrow-down"></i></li>
                     </a>
-                    <a href="#">
+                    <a href="login.html">
                         <li title="Login">
                             <i class="fa fa-user "></i>
                         </li>
@@ -285,13 +285,13 @@
         </div>
 
         <script>
-            $(document).ready(function(){
+            $(document).ready(function () {
 
                 loadProducts();
-        
+
             });
 
-            function loadProducts(){
+            function loadProducts() {
                 let indice = 0;
                 fetch('https://sheetlabs.com/CODO/productos')
                 .then((response) => response.json())
@@ -315,6 +315,7 @@
 
                     }
                 });
+                
             }
         </script>
 </body>
