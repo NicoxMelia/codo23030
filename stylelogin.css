@@ -40,6 +40,16 @@ input::placeholder {
     color: floralwhite;
 }
 
+input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+  
+
 .btn-field {
     width: 100%;
     display: flex;
